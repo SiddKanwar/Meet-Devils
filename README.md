@@ -1,2 +1,2 @@
 # Meet-Devils
-App that notifies you if your friend is near you (In progress)
+Get notified when your loved ones are near you (In progress)
