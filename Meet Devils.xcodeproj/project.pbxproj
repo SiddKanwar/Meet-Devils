@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72270DAD68EC89566E4A115C /* Pods_Meet_Devils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E994AAF426715BEC80AE41 /* Pods_Meet_Devils.framework */; };
+		EF61B64020340F6D00052EB7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF61B63F20340F6D00052EB7 /* FBSDKCoreKit.framework */; };
+		EF61B6422034166100052EB7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF61B6412034166100052EB7 /* FBSDKLoginKit.framework */; };
+		EF74D4302033FACA00CF6B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74D42F2033FACA00CF6B48 /* AppDelegate.swift */; };
+		EF74D4322033FACA00CF6B48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74D4312033FACA00CF6B48 /* ViewController.swift */; };
+		EF74D4352033FACA00CF6B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4332033FACA00CF6B48 /* Main.storyboard */; };
+		EF74D4372033FACA00CF6B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4362033FACA00CF6B48 /* Assets.xcassets */; };
+		EF74D43A2033FACA00CF6B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4382033FACA00CF6B48 /* LaunchScreen.storyboard */; };
+		EF74D4422033FB7B00CF6B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45DD54E271E811C2AF054A58 /* Pods-Meet Devils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Devils.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Devils/Pods-Meet Devils.release.xcconfig"; sourceTree = "<group>"; };
+		75E994AAF426715BEC80AE41 /* Pods_Meet_Devils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meet_Devils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8468131F277A5B72E8BEFF66 /* Pods-Meet Devils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Devils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Devils/Pods-Meet Devils.debug.xcconfig"; sourceTree = "<group>"; };
+		EF61B63F20340F6D00052EB7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		EF61B6412034166100052EB7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		EF74D42C2033FACA00CF6B48 /* Meet Devils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet Devils.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF74D42F2033FACA00CF6B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF74D4312033FACA00CF6B48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF74D4342033FACA00CF6B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF74D4362033FACA00CF6B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF74D4392033FACA00CF6B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF74D43B2033FACA00CF6B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF74D4292033FACA00CF6B48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72270DAD68EC89566E4A115C /* Pods_Meet_Devils.framework in Frameworks */,
+				EF61B64020340F6D00052EB7 /* FBSDKCoreKit.framework in Frameworks */,
+				EF61B6422034166100052EB7 /* FBSDKLoginKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C1037D6E5D054452374120A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF61B6412034166100052EB7 /* FBSDKLoginKit.framework */,
+				EF61B63F20340F6D00052EB7 /* FBSDKCoreKit.framework */,
+				75E994AAF426715BEC80AE41 /* Pods_Meet_Devils.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		707F3CBC75C2FEFE1B82FE3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8468131F277A5B72E8BEFF66 /* Pods-Meet Devils.debug.xcconfig */,
+				45DD54E271E811C2AF054A58 /* Pods-Meet Devils.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF74D4232033FACA00CF6B48 = {
+			isa = PBXGroup;
+			children = (
+				EF74D42E2033FACA00CF6B48 /* Meet Devils */,
+				EF74D42D2033FACA00CF6B48 /* Products */,
+				707F3CBC75C2FEFE1B82FE3B /* Pods */,
+				4C1037D6E5D054452374120A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF74D42D2033FACA00CF6B48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF74D42C2033FACA00CF6B48 /* Meet Devils.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF74D42E2033FACA00CF6B48 /* Meet Devils */ = {
+			isa = PBXGroup;
+			children = (
+				EF74D42F2033FACA00CF6B48 /* AppDelegate.swift */,
+				EF74D4312033FACA00CF6B48 /* ViewController.swift */,
+				EF74D4332033FACA00CF6B48 /* Main.storyboard */,
+				EF74D4362033FACA00CF6B48 /* Assets.xcassets */,
+				EF74D4382033FACA00CF6B48 /* LaunchScreen.storyboard */,
+				EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */,
+				EF74D43B2033FACA00CF6B48 /* Info.plist */,
+			);
+			path = "Meet Devils";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF74D42B2033FACA00CF6B48 /* Meet Devils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF74D43E2033FACA00CF6B48 /* Build configuration list for PBXNativeTarget "Meet Devils" */;
+			buildPhases = (
+				0617147BBFF6F89373F9B603 /* [CP] Check Pods Manifest.lock */,
+				EF74D4282033FACA00CF6B48 /* Sources */,
+				EF74D4292033FACA00CF6B48 /* Frameworks */,
+				EF74D42A2033FACA00CF6B48 /* Resources */,
+				840AE743A0BD8A2C6309654B /* [CP] Embed Pods Frameworks */,
+				6B0E30A09C651B0EEBC652F1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Meet Devils";
+			productName = "Meet Devils";
+			productReference = EF74D42C2033FACA00CF6B48 /* Meet Devils.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF74D4242033FACA00CF6B48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Sidd Kanwar";
+				TargetAttributes = {
+					EF74D42B2033FACA00CF6B48 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF74D4272033FACA00CF6B48 /* Build configuration list for PBXProject "Meet Devils" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF74D4232033FACA00CF6B48;
+			productRefGroup = EF74D42D2033FACA00CF6B48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF74D42B2033FACA00CF6B48 /* Meet Devils */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF74D42A2033FACA00CF6B48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF74D43A2033FACA00CF6B48 /* LaunchScreen.storyboard in Resources */,
+				EF74D4422033FB7B00CF6B48 /* GoogleService-Info.plist in Resources */,
+				EF74D4372033FACA00CF6B48 /* Assets.xcassets in Resources */,
+				EF74D4352033FACA00CF6B48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0617147BBFF6F89373F9B603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meet Devils-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B0E30A09C651B0EEBC652F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meet Devils/Pods-Meet Devils-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		840AE743A0BD8A2C6309654B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Meet Devils/Pods-Meet Devils-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meet Devils/Pods-Meet Devils-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF74D4282033FACA00CF6B48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF74D4322033FACA00CF6B48 /* ViewController.swift in Sources */,
+				EF74D4302033FACA00CF6B48 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF74D4332033FACA00CF6B48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF74D4342033FACA00CF6B48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF74D4382033FACA00CF6B48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF74D4392033FACA00CF6B48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF74D43C2033FACA00CF6B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF74D43D2033FACA00CF6B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF74D43F2033FACA00CF6B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8468131F277A5B72E8BEFF66 /* Pods-Meet Devils.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JAT3DCVF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Meet Devils/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SiddKanwar.Meet-Devils";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF74D4402033FACA00CF6B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45DD54E271E811C2AF054A58 /* Pods-Meet Devils.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JAT3DCVF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Meet Devils/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SiddKanwar.Meet-Devils";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF74D4272033FACA00CF6B48 /* Build configuration list for PBXProject "Meet Devils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF74D43C2033FACA00CF6B48 /* Debug */,
+				EF74D43D2033FACA00CF6B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF74D43E2033FACA00CF6B48 /* Build configuration list for PBXNativeTarget "Meet Devils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF74D43F2033FACA00CF6B48 /* Debug */,
+				EF74D4402033FACA00CF6B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF74D4242033FACA00CF6B48 /* Project object */;
+}
