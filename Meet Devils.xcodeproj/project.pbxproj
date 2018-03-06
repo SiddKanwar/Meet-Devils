@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72270DAD68EC89566E4A115C /* Pods_Meet_Devils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E994AAF426715BEC80AE41 /* Pods_Meet_Devils.framework */; };
+		EF59792D203816190036DFCB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59792C203816190036DFCB /* HomeViewController.swift */; };
 		EF61B64020340F6D00052EB7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF61B63F20340F6D00052EB7 /* FBSDKCoreKit.framework */; };
 		EF61B6422034166100052EB7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF61B6412034166100052EB7 /* FBSDKLoginKit.framework */; };
 		EF74D4302033FACA00CF6B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74D42F2033FACA00CF6B48 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 		45DD54E271E811C2AF054A58 /* Pods-Meet Devils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Devils.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Devils/Pods-Meet Devils.release.xcconfig"; sourceTree = "<group>"; };
 		75E994AAF426715BEC80AE41 /* Pods_Meet_Devils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meet_Devils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468131F277A5B72E8BEFF66 /* Pods-Meet Devils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Devils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Devils/Pods-Meet Devils.debug.xcconfig"; sourceTree = "<group>"; };
+		EF59792C203816190036DFCB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF61B63F20340F6D00052EB7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		EF61B6412034166100052EB7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		EF74D42C2033FACA00CF6B48 /* Meet Devils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet Devils.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 				EF74D42F2033FACA00CF6B48 /* AppDelegate.swift */,
 				EF74D4312033FACA00CF6B48 /* ViewController.swift */,
 				EF74D4332033FACA00CF6B48 /* Main.storyboard */,
+				EF59792C203816190036DFCB /* HomeViewController.swift */,
 				EF74D4362033FACA00CF6B48 /* Assets.xcassets */,
 				EF74D4382033FACA00CF6B48 /* LaunchScreen.storyboard */,
 				EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */,
@@ -215,6 +218,9 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -222,6 +228,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -237,6 +246,7 @@
 			files = (
 				EF74D4322033FACA00CF6B48 /* ViewController.swift in Sources */,
 				EF74D4302033FACA00CF6B48 /* AppDelegate.swift in Sources */,
+				EF59792D203816190036DFCB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
