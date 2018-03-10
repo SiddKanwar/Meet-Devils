@@ -29,7 +29,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             if user != nil {
                 //user is signed in
                 let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let homeViewController: UIViewController = mainStoryBoard.instantiateViewController(withIdentifier: "HomeView")
+                let homeViewController: UIViewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarControllerView")
                 self.present(homeViewController, animated: true, completion: nil)
             } else {
                 //no user signed in

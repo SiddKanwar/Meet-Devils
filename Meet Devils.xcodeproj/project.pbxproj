@@ -17,6 +17,8 @@
 		EF74D4372033FACA00CF6B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4362033FACA00CF6B48 /* Assets.xcassets */; };
 		EF74D43A2033FACA00CF6B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4382033FACA00CF6B48 /* LaunchScreen.storyboard */; };
 		EF74D4422033FB7B00CF6B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */; };
+		EFA60FA72053A9010073569A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA60FA62053A9010073569A /* ProfileTableViewController.swift */; };
+		EFA60FA92053AA960073569A /* TextInputTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA60FA82053AA960073569A /* TextInputTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		EF74D4392033FACA00CF6B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF74D43B2033FACA00CF6B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFA60FA62053A9010073569A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		EFA60FA82053AA960073569A /* TextInputTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +97,13 @@
 				EF74D42F2033FACA00CF6B48 /* AppDelegate.swift */,
 				EF74D4312033FACA00CF6B48 /* ViewController.swift */,
 				EF74D4332033FACA00CF6B48 /* Main.storyboard */,
+				EFA60FA82053AA960073569A /* TextInputTableView.swift */,
 				EF59792C203816190036DFCB /* HomeViewController.swift */,
 				EF74D4362033FACA00CF6B48 /* Assets.xcassets */,
 				EF74D4382033FACA00CF6B48 /* LaunchScreen.storyboard */,
 				EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */,
 				EF74D43B2033FACA00CF6B48 /* Info.plist */,
+				EFA60FA62053A9010073569A /* ProfileTableViewController.swift */,
 			);
 			path = "Meet Devils";
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -230,6 +237,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,8 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA60FA92053AA960073569A /* TextInputTableView.swift in Sources */,
 				EF74D4322033FACA00CF6B48 /* ViewController.swift in Sources */,
 				EF74D4302033FACA00CF6B48 /* AppDelegate.swift in Sources */,
+				EFA60FA72053A9010073569A /* ProfileTableViewController.swift in Sources */,
 				EF59792D203816190036DFCB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +394,7 @@
 			baseConfigurationReference = 8468131F277A5B72E8BEFF66 /* Pods-Meet Devils.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JAT3DCVF;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -394,8 +405,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SiddKanwar.Meet-Devils";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -404,6 +416,7 @@
 			baseConfigurationReference = 45DD54E271E811C2AF054A58 /* Pods-Meet Devils.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JAT3DCVF;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -414,8 +427,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SiddKanwar.Meet-Devils";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
