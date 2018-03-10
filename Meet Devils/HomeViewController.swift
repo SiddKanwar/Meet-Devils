@@ -11,6 +11,7 @@ import FirebaseAuth
 import FBSDKLoginKit
 import FirebaseCore
 import Firebase
+import FirebaseStorage
 
 class HomeViewController: UIViewController {
     
@@ -32,12 +33,51 @@ class HomeViewController: UIViewController {
             let uid = user.uid;
             
             self.nameLabel.text = name
-            let data = try? Data(contentsOf: photoUrl!)
-            profilePicture.image = UIImage(data:data!)
-        } else {
-            // No User signed in
+        
+            let storage = Storage.storage()
+            let storageRef = storage.reference(forURL: "gs://meet-devils.appspot.com")
+            let profilePicRef = storageRef.child(user.uid + "/profile_pic.jpg")
+
+            //check if the profile pic already exists in the firebase
+            profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if let error = error {
+                    print("image unable to download")
+                } else {
+                    // profile pic has been downloaded from firebase
+                        self.profilePicture.image = UIImage(data: data!)
+
+                    }
+                }
+            
+            //if not, download it to firebase
+            if(self.profilePicture.image == nil) {
+          
+            var profilePic = FBSDKGraphRequest(graphPath: "me/picture", parameters: ["height":300 , "width":300 , "redirect":false], httpMethod: "GET")
+            profilePic?.start(completionHandler: {(connection, result, error) -> Void in
+                // Insert your code here
+                if(error == nil) {
+                    let dictionary = result as? NSDictionary
+                    let data = dictionary?.object(forKey: "data")
+                    let urlPic = ((data as AnyObject).object(forKey: "url"))! as! String
+                    
+                    if let imageData = NSData(contentsOf: NSURL(string: urlPic)! as URL) {
+                        let uploadTask = profilePicRef.putData(imageData as Data, metadata: nil) { (metadata, error) in
+                            guard let metadata = metadata else {
+                                // Uh-oh, an error occurred!
+                                return
+                            }
+                            // Metadata contains file metadata such as size, content-type, and download URL.
+                            let downloadURL = metadata.downloadURL
+                        }
+                        self.profilePicture.image = UIImage(data:imageData as Data)
+                    }
+                }
+            })
+
+            }
             
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
