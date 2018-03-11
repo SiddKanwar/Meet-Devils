@@ -17,6 +17,8 @@
 		EF74D4372033FACA00CF6B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4362033FACA00CF6B48 /* Assets.xcassets */; };
 		EF74D43A2033FACA00CF6B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4382033FACA00CF6B48 /* LaunchScreen.storyboard */; };
 		EF74D4422033FB7B00CF6B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */; };
+		EF97B17320545FDA00CDF3D1 /* UsersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97B17220545FDA00CDF3D1 /* UsersCollectionViewController.swift */; };
+		EF97B1752054617900CDF3D1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97B1742054617900CDF3D1 /* CollectionViewCell.swift */; };
 		EFA60FA72053A9010073569A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA60FA62053A9010073569A /* ProfileTableViewController.swift */; };
 		EFA60FA92053AA960073569A /* TextInputTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA60FA82053AA960073569A /* TextInputTableView.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		EF74D4392033FACA00CF6B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF74D43B2033FACA00CF6B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF74D4412033FB7B00CF6B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF97B17220545FDA00CDF3D1 /* UsersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCollectionViewController.swift; sourceTree = "<group>"; };
+		EF97B1742054617900CDF3D1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EFA60FA62053A9010073569A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		EFA60FA82053AA960073569A /* TextInputTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,8 @@
 				EF74D42F2033FACA00CF6B48 /* AppDelegate.swift */,
 				EF74D4312033FACA00CF6B48 /* ViewController.swift */,
 				EF74D4332033FACA00CF6B48 /* Main.storyboard */,
+				EF97B1742054617900CDF3D1 /* CollectionViewCell.swift */,
+				EF97B17220545FDA00CDF3D1 /* UsersCollectionViewController.swift */,
 				EFA60FA82053AA960073569A /* TextInputTableView.swift */,
 				EF59792C203816190036DFCB /* HomeViewController.swift */,
 				EF74D4362033FACA00CF6B48 /* Assets.xcassets */,
@@ -255,8 +261,10 @@
 				EFA60FA92053AA960073569A /* TextInputTableView.swift in Sources */,
 				EF74D4322033FACA00CF6B48 /* ViewController.swift in Sources */,
 				EF74D4302033FACA00CF6B48 /* AppDelegate.swift in Sources */,
+				EF97B1752054617900CDF3D1 /* CollectionViewCell.swift in Sources */,
 				EFA60FA72053A9010073569A /* ProfileTableViewController.swift in Sources */,
 				EF59792D203816190036DFCB /* HomeViewController.swift in Sources */,
+				EF97B17320545FDA00CDF3D1 /* UsersCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

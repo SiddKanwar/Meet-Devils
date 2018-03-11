@@ -12,10 +12,12 @@ import FBSDKLoginKit
 import FirebaseCore
 import Firebase
 import FirebaseStorage
+import FirebaseDatabase
+
 
 class ProfileTableViewController: UITableViewController {
 
-    var about = ["Gender", "Age", "Phone", "Email", "Website", "Bio"]
+    var about = ["Name", "Gender", "Age", "Phone", "Email", "Website", "Bio"]
     
     //reference to Database
     var ref: DatabaseReference = Database.database().reference()
@@ -34,6 +36,8 @@ class ProfileTableViewController: UITableViewController {
                 let item:String = (cell?.myTextField.text!)!
                 
                 switch about[index] {
+                    case "Name":
+                        self.ref.child("user_profile").child("\(user!.uid)/gender").setValue(item)
                     case "Gender":
                         self.ref.child("user_profile").child("\(user!.uid)/gender").setValue(item)
                     case "Age":
@@ -76,6 +80,8 @@ class ProfileTableViewController: UITableViewController {
                 let field:String = (cell?.myTextField.placeholder?.lowercased())!
                 
                 switch field{
+                case "name":
+                    cell?.configure(text: userDetails?.object(forKey: "name") as? String, placeholder: "Name")
                 case "gender":
                     cell?.configure(text: userDetails?.object(forKey: "gender") as? String, placeholder: "Gender")
                 case "age":

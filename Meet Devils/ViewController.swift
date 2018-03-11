@@ -12,6 +12,8 @@ import FBSDKLoginKit
 import FBSDKShareKit
 import FirebaseCore
 import Firebase
+import FirebaseDatabase
+
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
    
@@ -75,7 +77,47 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 }
                 // User is signed in
             print("user logged into Firebase")
-                
+            
+            //When user logs in for the first time, store users' email and username on their profile page
+            //also store the small version of their pic in the db and in storage
+                if(error == nil) {
+                    let storage = Storage.storage()
+                    let storageRef = storage.reference(forURL: "gs://meet-devils.appspot.com")
+                    let profilePicRef = storageRef.child((user?.uid)! + "/profile_pic_small.jpg")
+                    
+                    //store the userID
+                    let userId = user?.uid
+                    let databaseRef: DatabaseReference = Database.database().reference()
+                    //read data from database
+                    databaseRef.child("user_profile").child(userId!).child("profile_pic_small").observeSingleEvent(of: .value, with: { (snapshot) in
+                        let profile_pic = snapshot.value as? String?
+                    
+                        if(profile_pic == nil) {
+                            if let imageData = NSData(contentsOf: user!.photoURL!){
+                                let uploadTask = profilePicRef.putData(imageData as Data, metadata: nil) { (metadata, error) in
+                                    guard let metadata = metadata else {
+                                        // Uh-oh, an error occurred!
+                                        return
+                                    }
+                                    // Metadata contains file metadata such as size, content-type, and download URL.
+                                    let downloadURL = metadata.downloadURL
+                                   databaseRef.child("user_profile").child(userId!).child("profile_pic_small").setValue(downloadURL()?.absoluteString)
+                                }
+                                
+                            }
+                        
+                            databaseRef.child("user_profile").child("\(userId!)/name").setValue(user?.displayName)
+                            databaseRef.child("user_profile").child("\(userId!)/gender").setValue("")
+                            databaseRef.child("user_profile").child("\(userId!)/age").setValue("")
+                            databaseRef.child("user_profile").child("\(userId!)/phone").setValue("")
+                            databaseRef.child("user_profile").child("\(userId!)/email").setValue(user?.email)
+                            databaseRef.child("user_profile").child("\(userId!)/website").setValue("")
+                            databaseRef.child("user_profile").child("\(userId!)/bio").setValue("")
+                        } else {
+                            print("user has logged in earlier") 
+                        }
+                    })
+                }
             }
         }
     }
@@ -83,8 +125,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("user did logged out")
     }
-
-}
     
-
+}
 
