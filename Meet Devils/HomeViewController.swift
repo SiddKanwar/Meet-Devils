@@ -12,12 +12,14 @@ import FBSDKLoginKit
 import FirebaseCore
 import Firebase
 import FirebaseStorage
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    let deviceId = UIDevice.current.identifierForVendor?.uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class HomeViewController: UIViewController {
             let email = user.email;
             let photoUrl = user.photoURL;
             let uid = user.uid;
+            
+            manageConnections(userId: uid)
             
             self.nameLabel.text = name
         
@@ -86,6 +90,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didTapLogout(_ sender: Any) {
+        //update the db for user is going offline
+        let user = Auth.auth().currentUser
+        let userID = user?.uid;
+
+        let myConnectionRef = Database.database().reference(withPath: "user_profile/\(userID!)/connections/\(self.deviceId!)")
+        
+        //when the user logs out, set the value to false
+        myConnectionRef.child("online").setValue(false)
+        myConnectionRef.child("last-online").setValue(NSDate().timeIntervalSince1970)
+        
+        
         //Log user out of firebase
         let firebaseAuth = Auth.auth()
         do {
@@ -102,6 +117,25 @@ class HomeViewController: UIViewController {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController:UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginView")
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func manageConnections(userId: String) {
+        //create a reference to the DB
+        let myConnectionRef = Database.database().reference(withPath: "user_profile/\(userId)/connections/\(self.deviceId!)")
+        //when the user logs in, set the value to true
+        myConnectionRef.child("online").setValue(true)
+        myConnectionRef.child("last-online").setValue(NSDate().timeIntervalSince1970)
+        
+        //observer will monitor if the user is logged in or not
+        myConnectionRef.observe(DataEventType.value, with: { (snapshot) in
+            
+            //unlike an if statement, guard statements only run if the condition is not met
+            guard let connected = snapshot.value as? Bool, connected else {
+                // Uh-oh, an error occurred!
+                return
+            }
+        })
+        
     }
    
 

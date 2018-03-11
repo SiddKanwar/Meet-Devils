@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 private let reuseIdentifier = "CollectionViewCell"
 
@@ -17,25 +18,46 @@ class UsersCollectionViewController: UICollectionViewController {
     var databaseRef:DatabaseReference  = Database.database().reference()
     var usersDict = NSDictionary()
     
-    var userNamesArray = [String]()
-    var userImagesArray = [String]()
+//    var userNamesArray = [String]()
+//    var userImagesArray = [String]()
+    
+    var usersArray = [AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        var loggedInUser = Auth.auth().currentUser
 
         self.loadingView.startAnimating()
         self.databaseRef.child("user_profile").observe(DataEventType.value, with:
             { (snapshot) in
                 self.usersDict = (snapshot.value as? NSDictionary)!
 
+                self.usersArray = [AnyObject]()
                 for(userId, details) in self.usersDict {
                     
                     let img = (details as AnyObject).object(forKey: "profile_pic_small") as? String
                     let name = (details as AnyObject).object(forKey: "name") as? String
+                    var connections = NSDictionary()
+                    connections = ((details as AnyObject).object(forKey: "connections") as? NSDictionary)!
                     let firstName = name?.components(separatedBy: " ")[0]
 
-                    self.userNamesArray.append(name!)
-                    self.userImagesArray.append(img!)
+                    for(deviceId, connection) in connections {
+                        if ((connection as AnyObject).object(forKey: "online") as? Bool)! {
+                            (details as AnyObject).setValue(true, forKey: "online")
+                        } else {
+                            if(!((connection as AnyObject).object(forKey: "online") as? Bool)! ) {
+                                (details as AnyObject).setValue(false, forKey: "online")
+                            }
+                        }
+                    }
+                    
+                    //it is not the current user
+                    if(loggedInUser?.uid != userId as? String) {
+                        (details as AnyObject).setValue(userId, forKey: "uId")
+                        self.usersArray.append(details as AnyObject)
+                    }
+
                     self.collectionView?.reloadData()
                     self.loadingView.stopAnimating()
                 }
@@ -74,18 +96,28 @@ class UsersCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return self.userImagesArray.count
+        return self.usersArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
     
         // Configure the cell
-        let imageUrl = NSURL(string:userImagesArray[indexPath.row])
-        let imageData = NSData(contentsOf: imageUrl! as URL )
-    
+
+        let imageUrl = NSURL(string:(usersArray[indexPath.row]["profile_pic_small"] as? String)!)
+        let imageData = NSData(contentsOf: imageUrl! as URL)
         cell.userImage.image = UIImage(data: imageData! as Data)
-        cell.userName.text = userNamesArray[indexPath.row]
+        cell.userName.text = usersArray[indexPath.row]["name"] as? String
+        
+        //add a border to the image
+        
+        cell.userImage.layer.borderWidth = 1.5
+        if(self.usersArray[indexPath.row]["online"] as! Bool) {
+            cell.userImage.layer.borderColor = UIColor.green.cgColor
+        } else {
+            cell.userImage.layer.borderColor = UIColor.red.cgColor
+
+        }
         
         return cell
     }

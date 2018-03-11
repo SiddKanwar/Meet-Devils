@@ -206,10 +206,10 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydl-5q-INJ">
                                             <rect key="frame" x="10" y="0.0" width="80" height="80"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="UoZ-MM-2O3">
-                                            <rect key="frame" x="33.5" y="79" width="33" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="UoZ-MM-2O3">
+                                            <rect key="frame" x="0.0" y="79" width="97" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="33" id="NSv-gk-fma"/>
+                                                <constraint firstAttribute="width" constant="97" id="NSv-gk-fma"/>
                                                 <constraint firstAttribute="height" constant="21" id="TTU-NY-Jyy"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -221,7 +221,7 @@
                                 <constraints>
                                     <constraint firstItem="Ydl-5q-INJ" firstAttribute="centerX" secondItem="g0f-9n-tbl" secondAttribute="centerX" id="BHt-Ha-w10"/>
                                     <constraint firstItem="Ydl-5q-INJ" firstAttribute="top" secondItem="g0f-9n-tbl" secondAttribute="top" id="EGX-Ol-119"/>
-                                    <constraint firstItem="UoZ-MM-2O3" firstAttribute="centerX" secondItem="g0f-9n-tbl" secondAttribute="centerX" id="bWe-eB-JZd"/>
+                                    <constraint firstItem="UoZ-MM-2O3" firstAttribute="centerX" secondItem="g0f-9n-tbl" secondAttribute="centerX" constant="-1.5" id="bWe-eB-JZd"/>
                                     <constraint firstItem="UoZ-MM-2O3" firstAttribute="top" secondItem="Ydl-5q-INJ" secondAttribute="bottom" constant="-1" id="tPo-rT-59p"/>
                                 </constraints>
                                 <connections>
